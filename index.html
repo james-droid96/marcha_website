@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Official Website Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/49b46903e3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!------------Body Info-------------->
+    <div id="header">
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-text">
+        <div class="profile-picture">
+            <img src="images/Dp1.jpg" class="PD">
+        </div>
+        <h1>Hi! I'm <span>James Po</span> <br> From Philippines</h1>
+    </div>
+
+    <!------------about me-------------->
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/userimage.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-tittle">About Me</h1><br>
+                    <p class="title-text">
+                        I'm passionate about creating seamless and engaging user experiences that are both beautiful and functional. 
+                        I believe good design is invisible, and I strive to make technology accessible and enjoyable for everyone.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experiences')">Experience</p>
+                        <p class="tab-links" onclick="opentab('educations')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces.</li> 
+                            <li><span>Web Developer</span><br>Web app Development.</li>
+                            <li><span>App Developer</span><br>Building Application (e.g) Desktop Apps.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiences">
+                        <ul>
+                            <li><span>2015 - 2016</span><br>Accounting Staff @Subong's Business Acct.Firm</li>
+                            <li><span>2019 - 2021</span><br>Sales Promoter @Xenon Mktg Company.</li>
+                            <li><span>2023 - 2024</span><br>System Programmer at Thesis System.</li>
+                            <li><span>2025</span><br>On the Job Training @BFP Alaminos City Pangasinan 2404.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="educations">
+                        <ul>
+                            <li><span>2004 - 2009</span><br>Primary @Palamis Alaminos City Pangasinan.</li>
+                            <li><span>2010 - 2012</span><br>Secondary @ACNHS Alaminos City Pangasinan.</li>
+                            <li><span>2023 - 2025</span><br>Tertiary @Sti College Alaminos City Pangasinan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------services-------------->
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-tittle">My Services</h1><br>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2><br>
+                    <p>
+                        I create beautiful and functional websites that are easy to use and look great on any device.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>App Developing</h2><br>
+                    <p>
+                        I design user interfaces that are intuitive and easy to use, creating a seamless experience for your users.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Android Developer</h2><br>
+                    <p>
+                        I build mobile applications that are fast, reliable, and secure, giving your users the best experience possible.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <!------------portfolio-------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-tittle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work5.jpg">
+                    <div class="layer">
+                        <h3>Web Design</h3>
+                        <p>Web design is not just about creating pretty layouts. 
+                         Its about understanding the marketing challenge behind your business </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/bg.jpg">
+                    <div class="layer">
+                        <h3>App Development</h3>
+                        <p>
+                            App development is the process of creating a computer program or a set of programs to perform the different tasks that a business requires.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work3.jpg">
+                    <div class="layer">
+                        <h3>Android Developer</h3>
+                        <p>
+                            Android development is the process by which new applications are created for devices running the Android operating system.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!------------contact-------------->
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-tittle">Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i>jamesmarcha84@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>0961-319-9357</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/james.marcha"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="mailto:jamespo1896@gmail.com"><i class="fa-brands fa-google"></i></a>
+                        <a href="https://www.instagram.com/marchajames25"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/james-po"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/Cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="NAME" placeholder="Your Name" required>
+                        <input type="email" name="EMAIL" placeholder="Your Email" required>
+                        <textarea name="MESSAGE" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------footer-------------->
+    <footer class="copyright">
+        <p>&copy; 2025 All rights reserved. <i class="fa-solid fa-heart"></i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
