@@ -1,6 +1,9 @@
-html{
+/* Smooth scrolling for the entire HTML document */
+html {
     scroll-behavior: smooth;
 }
+
+/* Resetting margin, padding, and setting default font and box-sizing */
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +11,15 @@ html{
     box-sizing: border-box;
 }
 
+/* Styling for the body element */
 body {
     position: relative;
-    background-color: black;
-    background-image: url(images/bg1.jpg);
-    color: white;
+    background-color: #f9f9f9;
+    color: #262626;
+    font-size: 16px;
 }
 
+/* Adding a background layer behind the body content */
 body::before {
     content: "";
     position: absolute;
@@ -23,88 +28,93 @@ body::before {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     z-index: -1;
 }
 
+/* Header section styling */
 #header {
-     display: flex;
-     justify-content: space-between;
-     margin-left: 30%;
-
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30%;
+    padding: 20px 0;
 }
 
+/* Profile picture styling */
 .PD {
-    width: 200px;
+    width: 250px;
     height: auto;
     padding: 10px;
     border-radius: 50%;
     object-fit: cover;
     margin-top: 20px;
-    border: 0.5px solid transparent;
-    box-shadow: 0 6px 3px #ff004f;
-    transition: glow 0.5s infinite alternate;
-}
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
-    }
-    100% {
-        box-shadow: 0 0 20px rgba(255, 0, 0, 1);
-    }
+    border: 5px solid black; 
 }
 
+/* General container styling */
 .container {
     padding: 10px 10%;
 }
 
+/* Navigation bar styling */
 nav {
-   margin-top: 2%;
-   text-align: center;
-   background: transparent;
-   backdrop-filter: blur(1px);
-   padding: 1rem;  
-   width: 68%;
-   left: 50%;
-   margin-left: 60%;
-   transform: translateX(-50%);
+    position: fixed;
+    padding: 50px 0;
+    margin-left: 70%;
 }
+
+/* Navigation list item styling */
 nav ul li {
-    display: inline-block;
+    display: flex;
     list-style: none;
     margin: 10px 10px;
 }
 
+/* Navigation unordered list styling */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Navigation link styling */
 nav ul li a {
     font-size: 18px;
     position: relative;
-    background: white;
+    background: #262626;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 30px;
-    
 }
 
+/* Hover effect for navigation links */
 nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #262626;
     position: absolute;
     left: 0;
     bottom: -6px;
     transition: 0.5s;
 }
 
+/* Hover effect for navigation links */
 nav ul li a:hover::after {
-    width: 180%;
+    width: 100%;
     transition: .5s;
-    background: #ff004f;
+    background: #262626;
 }
 
+/* Header text styling */
 .header-text {
     margin-top: 2%;
     font-size: 30px;
@@ -112,33 +122,38 @@ nav ul li a:hover::after {
     margin-left: 10%;
     padding: 10px;
 }
+
+/* Header text h1 styling */
 .header-text h1 {
     font-size: 40px;
     margin-top: 40px;
+    color: #262626;
 }
 
+/* Highlighted span in header text */
 .header-text h1 span {
-    background: #ff004f;
-    -webkit-background-clip: text;
-    color: transparent;
+    color: #262626;
 }
 
-/*------------about me----------- */
+/* About me section styling */
 .about {
     padding: 100px 0;
-    color: white;
+    color: #262626;
     margin-top: 40px;
 }
 
+/* Row layout for about section */
 .row {
     display: flex;
     padding: 20px;
 }
 
+/* About section column 1 styling */
 .about-col-1 {
     flex-basis: 35%;
 }
 
+/* Image styling in about section */
 .about-col-1 img {
     width: 90%;
     height: 400px;
@@ -146,28 +161,33 @@ nav ul li a:hover::after {
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* About section column 2 styling */
 .about-col-2 {
     flex-basis: 60%;
 }
 
+/* Subtitle styling */
 .sub-title {
     font-size: 60px;
     font-weight: 600;
     color: black;
 }
 
+/* Title text styling */
 .title-text {
-    background: white;
+    background: #262626;
     -webkit-background-clip: text;
     color: transparent;
 }
 
+/* Tab titles styling */
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
     font-weight: normal;
 }
 
+/* Tab links styling */
 .tab-links {
     margin-right: 50px;
     font-size: 18px;
@@ -177,37 +197,42 @@ nav ul li a:hover::after {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(1px);
     border-radius: 15px;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.5);
     width: 40%;
     text-align: center;
 }
 
+/* Hover effect for tab links */
 .tab-links::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #262626;
     position: absolute;
     left: 0;
     bottom: -8px;
     transition: 0.5s;
 }
 
+/* Active tab link styling */
 .tab-links.active-link::after {
     width: 100%;
-    color:black
+    color: black;
 }
 
+/* Tab contents list item styling */
 .tab-contents ul li {
     list-style: none;
     margin: 10px 0;
 }
 
+/* Highlighted span in tab contents */
 .tab-contents ul li span {
     color: #ff004f;
 }
 
+/* Hidden tab contents styling */
 .tab-contents {
     display: none;
     opacity: 0;
@@ -215,89 +240,118 @@ nav ul li a:hover::after {
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
+/* Active tab contents styling */
 .tab-contents.active-tab {
     display: block;
     opacity: 1;
     transform: scale(1);
 }
-/*------------My Services-----------*/
-#Services{
+
+/* Services section styling */
+#Services {
     padding: 50px 0;
 }
-h1{
-    color: white;
+
+/* General heading styling */
+h1 {
+    color: #262626;
     font-size: 40px;
 }
 
-.services-list{
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  grid-gap: 40px;
-  margin-top: 50px;
-  color: white;
-  font-size: 80px;
+/* Services list grid styling */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    color: #262626;
+    font-size: 80px;
 }
-h2{
-    color: #ff004f; /* Add color */
+
+/* Subheading styling */
+h2 {
+    color: #ff004f;
 }
-.services-list div{
-    background: rgba(255, 255, 255, 0.15); /* Add background color */
-    padding: 40px; /* Add padding */
-    font-size: 13px; /* Add font size */
-    backdrop-filter: blur(0.2s); /* Add backdrop filter */
-    border-radius: 10px; /* Add border radius */
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5); /* Add shadow */
-    transition: background 0.4s, transform 0.4s; /* Add transition for hover effect */
+
+/* Individual service card styling */
+.services-list div {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    font-size: 13px;
+    border-radius: 10px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+    transition: background 0.4s, transform 0.4s;
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
-.services-list div i{
-   font-size: 50px;
-   margin-bottom: 30px;
+
+/* Icon styling in service cards */
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
 }
-.services-list div h2{
+
+/* Service card heading styling */
+.services-list div h2 {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 15px;
 }
-.services-list div a{
-    text-decoration:  none;
+
+/* Service card link styling */
+.services-list div a {
+    text-decoration: none;
     color: white;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
 }
-.services-list div:hover{
-    background: black;
-    transform: translateY(-10px); /* Add transition for hover effect */
+
+/* Hover effect for service cards */
+.services-list div:hover {
+    background: #f9f9f9;
+    transform: translateY(-10px);
 }
-/*------------My Portfolio-----------*/
-#portfolio{
+
+/* Portfolio section styling */
+#portfolio {
     padding: 150px 0;
 }
-.work-list{
+
+/* Portfolio work list grid styling */
+.work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
-.work{
+
+/* Individual work card styling */
+.work {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
     color: white;
 }
-.work img{
+
+/* Work card image styling */
+.work img {
     width: 100%;
     height: 95%;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     display: block;
-    transition: transform 0.5s; /* Add transition for hover effect */
+    transition: transform 0.5s;
 }
-.layer{
+
+/* Overlay layer styling for work cards */
+.layer {
     width: 100%;
     height: 0%;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), grey);
+    background: rgba(255, 255, 255, 0.15);
+    color: black;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -309,15 +363,22 @@ h2{
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     transition: height 0.5s;
 }
-.layer h3{
+
+/* Work card overlay heading styling */
+.layer h3 {
     font-weight: 500;
     margin-bottom: 20px;
-    color: #ff004f;
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
 }
-.layer a{
+
+/* Work card overlay link styling */
+.layer a {
     margin-top: 20px;
     color: #ff004f;
     text-decoration: none;
@@ -329,167 +390,221 @@ h2{
     border-radius: 50%;
     text-align: center;
 }
-.work:hover  img{
-      transform: scale(1.1);/* Add transition for hover effect */
+
+/* Hover effect for work card images */
+.work:hover img {
+    transform: scale(1.1);
 }
-.work:hover .layer{
-     height: 100%;/* Add transition for hover effect */
+
+/* Hover effect for work card overlay */
+.work:hover .layer {
+    height: 100%;
 }
-.btn{
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
+
+/* Download CV button styling */
+.download-cv {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 30px;
+    border: 1px solid #262626;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: #262626;
     transition: background 0.5s;
+    background: transparent;
 }
-.btn:hover{
-    background: #ff004f;
+
+/* Hover effect for download CV button */
+.download-cv:hover {
+    background: #262626;
+    color: white;
 }
-/*------------My Contact-----------*/
-.contact-left{
-    flex-basis: 35%;
+
+/* Contact section styling */
+#Contact {
+    display: grid;
+    place-items: center;
+    padding: 50px 0;
 }
-.contact-right{
-    flex-basis: 60%;
+
+/* Contact container styling */
+#Contact .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    max-width: 600px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
 }
-.contact-left p{
-    margin-top: 30px;
-}
-.contact-left p i{
+
+/* Contact left section icon styling */
+.contact-left p i {
     color: #ff004f;
     margin-right: 15px;
     font-size: 25px;
 }
-.social-icons{
+
+/* Social icons styling */
+.social-icons {
     margin-top: 30px;
 }
-.social-icons a{
+
+/* Social icons link styling */
+.social-icons a {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
+    color: #262626;
     display: inline-block;
-    transition: transform 0.5s; 
+    transition: transform 0.5s;
 }
-.social-icons a:hover{
-    color: #ff004f;
-    transform: translateY(-5px);
-}
-.btn.btn2{
-    display: inline-block;
-    background: #ff004f;
-}
-.contact-right form{
-    width: 100%;
 
+/* Hover effect for social icons */
+.social-icons a:hover {
+    transition: transform 0.5s;
+    transform: translateY(-10px);
 }
-form input, form textarea{
+
+/* Submit button styling */
+.submit-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 60px;
+    border: none;
+    border-radius: 6px;
+    background: #262626;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+/* Hover effect for submit button */
+.submit-btn:hover {
+    background: #262626;
+    color: white;
+}
+
+/* Contact form styling */
+.contact-right form {
+    width: 100%;
+}
+
+/* Input and textarea styling in forms */
+form input, form textarea {
     width: 100%;
     border: 0;
     outline: none;
     background: #262626;
-    padding: 15px;
+    padding: 20px;
     margin: 15px 0;
     color: white;
     font-size: 18px;
     border-radius: 6px;
 }
-form .btn2{
+
+/* Form button styling */
+form .btn2 {
     padding: 14px 60px;
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
 }
-.copyright{
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
-    padding: 15px 0;
     background: #262626;
-    font-weight: 300;
-    margin-top: 8px;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
-.copyright i{
-    color: #ff004f;
-}
-/* Existing styles... */
 
-/*------------Css for Small Screen-----------*/
+/* Responsive styles for tablets (768px and below) */
 @media (max-width: 768px) {
-    .container {
-        padding: 10px 5%;
-    }
-
-    .header-text {
-        font-size: 24px;
-    }
-
-    .header-text h1 {
-        font-size: 30px;
-    }
-
-    .about {
-        padding: 50px 0;
-    }
-
-    .row {
+    #header {
         flex-direction: column;
-        padding: 10px;
+        margin-left: 0;
+        padding: 10px 0;
     }
 
-    .about-col-1, .about-col-2 {
-        flex-basis: 100%;
+    nav {
+        margin-left: 0;
+        padding: 20px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: static;
+        transform: none;
         text-align: center;
     }
 
-    .about-col-1 img {
-        width: 80%;
-        height: auto;
+    nav ul li {
+        margin: 10px 0;
     }
 
-    .tab-links {
-        width: 100%;
-        margin-bottom: 20px;
+    .header-text {
+        margin-left: 5%;
+        font-size: 24px;
     }
 
     .services-list {
         grid-template-columns: 1fr;
-        grid-gap: 20px;
-    }
-
-    .services-list div {
-        padding: 20px;
     }
 
     .work-list {
         grid-template-columns: 1fr;
-        grid-gap: 20px;
     }
 
-    .work img {
+    .about-col-1 img {
+        width: 100%;
         height: auto;
     }
+}
 
-    .contact-left, .contact-right {
-        flex-basis: 100%;
-        text-align: center;
+/* Responsive styles for mobile devices (480px and below) */
+@media (max-width: 480px) {
+    .header-text h1 {
+        font-size: 28px;
     }
 
-    .social-icons a {
-        font-size: 24px;
-        margin-right: 10px;
+    .sub-title {
+        font-size: 40px;
     }
 
-    .btn {
-        padding: 10px 30px;
+    .tab-links {
+        width: 100%;
+        margin-right: 0;
         font-size: 16px;
+    }
+
+    .services-list div {
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    .download-cv {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 8px 0;
     }
 
     form input, form textarea {
         font-size: 16px;
+        padding: 15px;
     }
 
     form .btn2 {
@@ -498,103 +613,57 @@ form .btn2{
     }
 }
 
-@media (max-width: 480px) {
-    .header-text {
+/* Toggle button styles */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #262626;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+}
+
+/* Hide navigation links by default */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive navigation styles for tablets */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #262626;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links li a {
+        color: #262626;
+        text-decoration: none;
         font-size: 18px;
     }
 
-    .header-text h1 {
-        font-size: 24px;
-    }
-
-    .about-col-1 img {
-        width: 100%;
-    }
-
-    .services-list div {
-        padding: 15px;
-    }
-
-    .social-icons a {
-        font-size: 20px;
-        margin-right: 5px;
-    }
-
-    .btn {
-        padding: 8px 20px;
-        font-size: 14px;
-    }
-
-    form input, form textarea {
-        font-size: 14px;
-    }
-
-    form .btn2 {
-        padding: 8px 30px;
-        font-size: 14px;
-    }
-}
-/*------------Responsive Navigation-----------*/
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    color: white; 
-    position: absolute; /* Add this line */
-    top: 10px; /* Adjust as needed */
-    right: 30px; /* Adjust as needed */
-    left: 120px; 
-}
-
-.menu-toggle span {
-    height: 3px;
-    width: 25px;
-    background: white;
-    margin: 4px 0;
-    transition: 0.5s;
-}
-
-#nav-menu {
-    display: flex;
-    list-style: none;
-}
-
-@media (max-width: 768px) {
     .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.active {
         display: flex;
     }
-
-    #nav-menu {
-        display: none; /* Hide menu */
-        flex-direction: column; /* Add this line */
-        width: 100%; /* Add this line */
-        position: absolute; /* Add this line */
-        top: 60px; /* Adjust as needed */
-        left: 0; /* Add this line */
-        z-index: 1; /* Add z-index */
-        opacity: 0; /* Hide menu */
-        transition: opacity 0.5s ease-in-out; /* Add transition */
-        border-radius: 10px; /* Add border radius */
-        padding: 10px; /* Add padding */
-    }
-
-    #nav-menu.show {
-        display: flex; /* Show menu */
-        opacity: 1; /* Show menu */
-    }
-
-    #nav-menu li {
-        text-align: left; /* Center text */
-        padding: 5px 0; /* Add padding */
-        border-radius: 8px; /* Add border radius */
-        margin: 5px 0; /* Add margin between items */
-    }
 }
-
-
-
-
-
-
-
-

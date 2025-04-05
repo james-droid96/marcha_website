@@ -10,12 +10,10 @@ function opentab(tabname) {
     }
     document.getElementById(tabname).classList.add("active-tab");
     document.querySelector(`[onclick="opentab('${tabname}')"]`).classList.add("active-link");
-
-    // Hide the tab content after 3 seconds
-    setTimeout(function() {
-        document.getElementById(tabname).classList.remove("active-tab");
-        document.querySelector(`[onclick="opentab('${tabname}')"]`).classList.remove("active-link");
-    }, 3000); // 3000 milliseconds = 3 seconds
+}
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
 }
 
 // Smooth scrolling for anchor links
@@ -32,19 +30,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Toggle the mobile menu
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
 
-    menuToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('show');
+    // Get form values
+    const name = event.target.NAME.value.trim();
+    const email = event.target.EMAIL.value.trim();
+    const message = event.target.MESSAGE.value.trim();
 
-        // Auto close the menu after 10 seconds
-        if (navMenu.classList.contains('show')) {
-            setTimeout(function() {
-                navMenu.classList.remove('show');
-            }, 10000); // 10000 milliseconds = 10 seconds
-        }
-    });
+    // Validate inputs
+    if (!name || !email || !message) {
+        alert('Please fill out all fields.');
+        return;
+    }
+
+    // Simulate form submission (you can replace this with an actual API call)
+    alert(`Thank you, ${name}! Your message has been sent.`);
+
+    // Clear the form
+    event.target.reset();
 });
